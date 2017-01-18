@@ -1,6 +1,6 @@
 <?php
 
-use mdm\admin\components\Configs;
+use zc\admin\components\Configs;
 
 /* @var $this tests\codeception\fixtures\AdminFixture */
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace mdm\admin\components;
+namespace zc\admin\components;
 
 use Yii;
 use yii\db\Connection;
@@ -30,7 +30,7 @@ use yii\di\Instance;
  * or use [[\Yii::$container]]
  * 
  * ```
- * Yii::$container->set('mdm\admin\components\Configs',[
+ * Yii::$container->set('zc\admin\components\Configs',[
  *     'db' => 'customDb',
  *     'menuTable' => 'admin_menu',
  * ]);

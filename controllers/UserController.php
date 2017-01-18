@@ -1,15 +1,15 @@
 <?php
 
-namespace mdm\admin\controllers;
+namespace zc\admin\controllers;
 
 use Yii;
-use mdm\admin\models\form\Login;
-use mdm\admin\models\form\PasswordResetRequest;
-use mdm\admin\models\form\ResetPassword;
-use mdm\admin\models\form\Signup;
-use mdm\admin\models\form\ChangePassword;
-use mdm\admin\models\User;
-use mdm\admin\models\searchs\User as UserSearch;
+use zc\admin\models\form\Login;
+use zc\admin\models\form\PasswordResetRequest;
+use zc\admin\models\form\ResetPassword;
+use zc\admin\models\form\Signup;
+use zc\admin\models\form\ChangePassword;
+use zc\admin\models\User;
+use zc\admin\models\searchs\User as UserSearch;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;

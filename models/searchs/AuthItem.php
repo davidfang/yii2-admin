@@ -1,11 +1,11 @@
 <?php
 
-namespace mdm\admin\models\searchs;
+namespace zc\admin\models\searchs;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ArrayDataProvider;
-use mdm\admin\components\Configs;
+use zc\admin\components\Configs;
 use yii\rbac\Item;
 
 /**

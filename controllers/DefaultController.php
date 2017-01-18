@@ -1,6 +1,6 @@
 <?php
 
-namespace mdm\admin\controllers;
+namespace zc\admin\controllers;
 
 use Yii;
 

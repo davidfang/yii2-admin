@@ -1,6 +1,6 @@
 <?php
 
-namespace mdm\admin;
+namespace zc\admin;
 
 use yii\web\AssetBundle;
 

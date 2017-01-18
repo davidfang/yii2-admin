@@ -1,6 +1,6 @@
 <?php
 
-use mdm\admin\components\Configs;
+use zc\admin\components\Configs;
 
 /**
  * Migration table of table_menu
