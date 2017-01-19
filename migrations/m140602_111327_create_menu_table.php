@@ -24,13 +24,18 @@ class m140602_111327_create_menu_table extends \yii\db\Migration
 
         $this->createTable($menuTable, [
             'id' => $this->primaryKey(),
-            'name' => $this->string(128)->notNull(),
-            'parent' => $this->integer(),
-            'route' => $this->string(),
-            'order' => $this->integer(),
-            'data' => $this->binary(),
+            'name' => $this->string(128)->notNull()->comment('菜单'),
+            'parent' => $this->integer()->comment('父级'),
+            'route' => $this->string()->comment('路由'),
+            'multi_controller' => $this->string()->comment('多控制器'),
+            'icon' => $this->string()->comment('图标'),
+            'visible' => $this->integer()->comment('是否显示'),
+            'order' => $this->integer()->comment('排序'),
+            'data' => $this->binary()->comment('自定义options'),
             "FOREIGN KEY ([[parent]]) REFERENCES {$menuTable}([[id]]) ON DELETE SET NULL ON UPDATE CASCADE",
         ], $tableOptions);
+
+
     }
 
     /**

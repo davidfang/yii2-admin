@@ -34,6 +34,19 @@ $this->params['breadcrumbs'][] = $this->title;
             'menuParent.name:text:Parent',
             'name',
             'route',
+            'multi_controller',
+            'icon',
+            //'visible',
+            [
+                //'attribute' => 'visible',
+                'label' => Yii::t('rbac-admin', 'Visible'),
+                'value' => \mdm\admin\models\Menu::getVisibleValues()[$model->visible],
+                /*function($model){
+                    return 'aaaa';
+                    $arr = ;
+                    return $arr;
+                }*/
+            ],
             'order',
         ],
     ])

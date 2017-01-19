@@ -28,9 +28,15 @@ $this->registerJs($this->render('_script.js'));
             <?= $form->field($model, 'parent_name')->textInput(['id' => 'parent_name']) ?>
 
             <?= $form->field($model, 'route')->textInput(['id' => 'route']) ?>
+
+            <?= $form->field($model, 'multi_controller')->textInput(['id' => 'multi_controller']) ?>
         </div>
         <div class="col-sm-6">
             <?= $form->field($model, 'order')->input('number') ?>
+
+            <?= $form->field($model, 'icon')->textInput(['id'=>'icon']) ?>
+
+            <?= $form->field($model, 'visible')->dropDownList([''=>'选择',1=>'启用',0=>'关闭']) ?>
 
             <?= $form->field($model, 'data')->textarea(['rows' => 4]) ?>
         </div>

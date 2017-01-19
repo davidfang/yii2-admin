@@ -23,6 +23,10 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'parent') ?>
 
+    <?= $form->field($model, 'multi_controller') ?>
+
+    <?= $form->field($model, 'visible') ?>
+
     <?= $form->field($model, 'route') ?>
 
     <?= $form->field($model, 'data') ?>

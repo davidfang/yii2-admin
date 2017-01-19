@@ -36,6 +36,17 @@ $this->params['breadcrumbs'][] = $this->title;
                 'label' => Yii::t('rbac-admin', 'Parent'),
             ],
             'route',
+            'multi_controller',
+            'icon',
+            //'visible',
+            [
+                'attribute' => 'visible',
+                'filter' => Html::activeDropDownList($searchModel,'visible',\mdm\admin\models\Menu::getVisibleValues(),['class' => 'form-control']),
+                'label' => Yii::t('rbac-admin', 'Visible'),
+                'value' => function($model){
+                    return \mdm\admin\models\Menu::getVisibleValues()[$model->visible];
+                }
+            ],
             'order',
             ['class' => 'yii\grid\ActionColumn'],
         ],

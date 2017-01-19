@@ -13,6 +13,10 @@ use yii\db\Query;
  * @property string $name Menu name
  * @property integer $parent Menu parent
  * @property string $route Route for this menu
+ * @property string $multi_controller Multi controller for this menu
+ * @property string $icon Icon for this menu
+ * @property string $visible Visible for this menu
+ *
  * @property integer $order Menu order
  * @property string $data Extra information for this menu
  *
@@ -33,6 +37,13 @@ class Menu extends \yii\db\ActiveRecord
     {
         return Configs::instance()->menuTable;
     }
+    public static function getVisibleValues(){
+        return [
+            ''=>'请选择',
+            0 =>'关闭',
+            1 =>'开启'
+        ];
+    }
 
     /**
      * @inheritdoc
@@ -52,7 +63,7 @@ class Menu extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name'], 'required'],
+            [['name','visible'], 'required'],
             [['parent_name'], 'in',
                 'range' => static::find()->select(['name'])->column(),
                 'message' => 'Menu "{value}" not found.'],
@@ -61,9 +72,11 @@ class Menu extends \yii\db\ActiveRecord
                 return !$this->isNewRecord;
             }],
             [['order'], 'integer'],
+            [['multi_controller','icon'],'safe'],
             [['route'], 'in',
                 'range' => static::getSavedRoutes(),
-                'message' => 'Route "{value}" not found.']
+                'message' => 'Route "{value}" not found.'],
+            ['visible','in','range'=>[0,1]]
         ];
     }
 
@@ -97,6 +110,10 @@ class Menu extends \yii\db\ActiveRecord
             'parent' => Yii::t('rbac-admin', 'Parent'),
             'parent_name' => Yii::t('rbac-admin', 'Parent Name'),
             'route' => Yii::t('rbac-admin', 'Route'),
+            'multi_controller' => Yii::t('rbac-admin', 'Multi controller'),
+            'icon' => Yii::t('rbac-admin', 'Icon'),
+            'visible' => Yii::t('rbac-admin', 'Risible'),
+
             'order' => Yii::t('rbac-admin', 'Order'),
             'data' => Yii::t('rbac-admin', 'Data'),
         ];

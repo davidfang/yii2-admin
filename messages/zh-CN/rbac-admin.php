@@ -65,4 +65,8 @@ return [
     'Menu' => '菜单',
     'Help' => '帮助',
     'Application' => '应用',
+
+    'Multi controller' => '多个控制器',
+    'Icon' => '图标',
+    'Visible' => '是否显示',
 ];
