@@ -1,6 +1,7 @@
 <?php
 
 use yii\db\Migration;
+use mdm\admin\components\Configs;
 
 class m170119_103027_menum_data extends Migration
 {
@@ -8,7 +9,7 @@ class m170119_103027_menum_data extends Migration
     {
         $menuTable = Configs::instance()->menuTable;
         $this->batchInsert($menuTable,
-            [`id`, `name`, `parent`, `route`, `multi_controller`, `icon`, `visible`, `order`, `data`],
+            ['id', 'name', 'parent', 'route', 'multi_controller', 'icon', 'visible', 'order', 'data'],
             //['id' , 'name','parent','route','multi_controller','icon','visible','order','data'],
             [
                 [1, '权限管理', NULL, '/admin/default/index', '', 'fa fa-users', 1, 1, '{"icon": "fa fa-users", "visible": true}'],
