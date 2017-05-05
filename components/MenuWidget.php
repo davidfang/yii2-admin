@@ -230,7 +230,7 @@ class MenuWidget extends \yii\widgets\Menu
 
             'visible' => $menu['visible'],
         'icon' => $menu['icon'],
-        'multi-controller' => $menu['multi-controller'],
+        'multi-controller' => isset($menu['multi-controller'])?$menu['multi-controller']:null,
         ];
         //处理我们的配置
         if ($data) {
