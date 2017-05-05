@@ -82,3 +82,12 @@ $config['modules']['gii'] = [
 
 ```
 
+6. 设置最高权限的资源
+
+   http://backend.example.dev/admin/route
+   /*
+   
+7. 给角色赋最高权限的资源
+
+   http://backend.example.dev/admin/role
+   
