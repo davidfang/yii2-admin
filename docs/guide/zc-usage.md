@@ -78,7 +78,7 @@ $config['modules']['gii'] = [
 
 
 ```
- console/yii  migrate/up --migrationPath='@vendor/zc/yii2-amin/migrations'
+ console/yii  migrate/up --migrationPath='@vendor/zc/yii2-admin/migrations'
 
 ```
 
